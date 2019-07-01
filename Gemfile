@@ -7,9 +7,9 @@ group :development, :test do
   gem "sqlite3", :platform => [:ruby, :mswin, :mingw]
   gem "jdbc-sqlite3", :platform => :jruby
   gem 'activerecord-jdbcsqlite3-adapter', :require => 'jdbc-sqlite3', :platform => :jruby
-  gem 'factory_girl_rails', "~> 1.1"
-  gem 'rspec', "~> 3"
-  gem 'rspec-rails', "~> 3"
+  gem 'factory_bot_rails'
+  gem 'rspec'
+  gem 'rspec-rails'
   gem 'rails-controller-testing'
   gem 'rspec-its'
   gem 'coveralls', require: false

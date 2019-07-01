@@ -13,9 +13,9 @@ require 'kaminari'
 
 Dir[File.expand_path(File.join(File.dirname(__FILE__),'support','**','*.rb'))].each {|f| require f}
 
-require 'factory_girl'
+require 'factory_bot'
 plutus_definitions = File.expand_path(File.join(File.dirname(__FILE__), 'factories'))
-FactoryGirl.definition_file_paths << plutus_definitions
+FactoryBot.definition_file_paths << plutus_definitions
 
 
 RSpec.configure do |config|
@@ -23,4 +23,4 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 end
 
-FactoryGirlHelpers.reload()
+FactoryBotHelpers.reload()
