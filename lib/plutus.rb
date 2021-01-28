@@ -4,6 +4,11 @@ require "rails"
 module Plutus
   class Engine < Rails::Engine
     isolate_namespace Plutus
+    config.to_prepare do
+      Dir.glob("#{Rails.root}/app/overrides/**/*_override.rb").each do |override|
+        require_dependency override
+      end
+    end
   end
 
 

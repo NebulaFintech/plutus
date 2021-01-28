@@ -10,7 +10,7 @@ module Plutus
         Plutus.enable_tenancy = true
         Plutus.tenant_class = 'Plutus::Entry'
 
-        FactoryBotHelpers.reload()
+        FactoryBot.reload()
         Plutus::Asset.new
       end
 
@@ -23,7 +23,7 @@ module Plutus
         Plutus.enable_tenancy = false
         Plutus.tenant_class = nil
 
-        FactoryBotHelpers.reload()
+        FactoryBot.reload()
       end
 
       it 'validate uniqueness of name scoped to tenant' do

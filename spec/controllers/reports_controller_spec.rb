@@ -12,12 +12,12 @@ module Plutus
       it "renders when one entry exists" do
         allow(Entry).to receive_message_chain(:order).and_return([mock_entry])
         get :balance_sheet
-        expect(response).to be_success
+        expect(response).to have_http_status(:ok)
       end
       it "renders when no entries exist" do
         allow(Entry).to receive_message_chain(:order).and_return([])
         get :balance_sheet
-        expect(response).to be_success
+        expect(response).to have_http_status(:ok)
       end
     end
   end
